@@ -6,22 +6,7 @@ BasicGame.Game = function (game) {
 BasicGame.Game.prototype = {
 
   preload: function () {
-    this.load.image('sea', 'assets/sea.png');
-    this.load.image('bullet', 'assets/bullet.png');
-    this.load.image('enemy-bullet', 'assets/enemy-bullet.png');
-    this.load.image('powerup1', 'assets/powerup1.png');
-    this.load.spritesheet('greenEnemy', 'assets/enemy.png', 32, 32);
-    this.load.spritesheet('whiteEnemy', 'assets/shooting-enemy.png', 32, 32);
-    this.load.spritesheet('boss', 'assets/boss.png', 93, 75);
-    this.load.spritesheet('explosion', 'assets/explosion.png', 32, 32);
-    this.load.spritesheet('player', 'assets/player.png', 64, 64);
-    this.load.audio('explosion', ['assets/explosion.ogg', 'assets/explosion.wav']);
-    this.load.audio('playerExplosion', 
-                    ['assets/player-explosion.ogg', 'assets/player-explosion.wav']);
-    this.load.audio('enemyFire',
-                    ['assets/enemy-fire.ogg', 'assets/enemy-fire.wav']);
-    this.load.audio('playerFire', 'assets/player-fire.ogg', 'assets/player-fire.wav');
-    this.load.audio('powerUp', ['assets/powerup.ogg', 'assets/powerup.wav']);
+    
   },
 
   create: function () {
@@ -599,8 +584,8 @@ BasicGame.Game.prototype = {
     this.endText.destroy();
     this.returnText.destroy();
 
-    //  Then let's go back to the main menu.
-    this.state.start('MainMenu');
+    //  Then let's go to the highscore screen.
+    this.state.start('Highscores');
 
   }
 

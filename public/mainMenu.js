@@ -28,6 +28,10 @@ BasicGame.MainMenu.prototype = {
     if (this.input.keyboard.isDown(Phaser.Keyboard.Z) || this.input.activePointer.isDown) {
       this.startGame();
     }
+
+    if (this.input.keyboard.isDown(Phaser.Keyboard.H)){
+      this.state.start('Highscores');
+    }
     //  Do some nice funky main menu effect here
 
   },
